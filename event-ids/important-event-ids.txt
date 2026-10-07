@@ -1,0 +1,49 @@
+==================================================
+WINDOWS SECURITY EVENT IDs & SOC INVESTIGATION NOTES
+==================================================
+
+📌 IMPORTANT EVENT IDs OVERVIEW:
+--------------------------------------------------
+- 4624 : Successful Logon
+- 4625 : Failed Logon
+- 4634 : Account Logoff
+- 4672 : Special Privileges Assigned to New Logon
+- 4740 : User Account Locked Out
+- 4798 : A user's local group membership was enumerated
+- 5379 : Credential Manager credentials were read
+
+
+🔍 SOC INVESTIGATION NOTES:
+--------------------------------------------------
+
+[4624] - Successful Logon:
+- Purpose: Used to investigate successful authentication and track valid user sessions on the system.
+
+[4625] - Failed Logon:
+- Purpose: Used to investigate failed authentication attempts.
+- Security Insight: Repeated events within a short time frame may indicate brute-force or password-spraying attacks.
+
+[4634] - Account Logoff:
+- Purpose: Used to identify account logoff activity and determine session durations.
+
+[4672] - Special Privileges Assigned:
+- Purpose: Used to identify logons where special privileges (such as administrator rights) were assigned to new logon sessions.
+
+[4740] - User Account Locked Out:
+- Purpose: Used to investigate account lockout activity caused by repeated incorrect password entries.
+
+[4798] - Local Group Membership Enumeration:
+- Purpose: Used to monitor when an application or user queries local group memberships on the system (often tracked during local reconnaissance activities).
+
+[5379] - Credential Manager Credentials Read:
+- Purpose: Used to track when stored credentials within Windows Credential Manager are accessed or read.
+
+
+📸 SCREENSHOT REFERENCE MAPPING:
+--------------------------------------------------
+- Screenshot-1.jpg -> Event Viewer Overview and Summary Dashboard
+- Screenshot-2.jpg -> Windows Security Log Main View
+- Screenshot-3.jpg -> Event ID 4625 (Failed Logon Details)
+- Screenshot-4.jpg -> Event ID 4798 (Local Group Enumeration Details)
+- Screenshot-5.jpg -> Event ID 4672 (Special Logon / Privileges Assigned)
+- Screenshot-6.jpg & Screenshot-7.jpg -> Event ID 5379 (Credential Manager & Filter Settings)
